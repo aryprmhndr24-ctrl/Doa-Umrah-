@@ -1,0 +1,6 @@
+{
+  "name": "Panduan Doa Umrah",
+  "description": "Aplikasi panduan doa umrah lengkap dari keberangkatan hingga tahallul dengan bacaan Arab, latin, arti, dan penghitung putaran thawaf & sa'i.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

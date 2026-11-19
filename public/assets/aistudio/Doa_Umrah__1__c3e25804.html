@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Doa Umrah</title>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Plus+Jakarta+Sans:wght@500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f3f0e8;--tile:#fff;--tx:#17211d;--mu:#55625c;--dk:#0f4a3c;--dkt:#fff;--gd:#9a7420;--gl:#e9d9ab;--ln:#e1ddd0;--soft:#f6f3ea;--sh:0 2px 10px rgba(20,40,30,.08)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#101613;--tile:#1a221e;--tx:#eef2ef;--mu:#a9b7b0;--dk:#2f8068;--gd:#e0bd62;--gl:#3b3418;--ln:#2c3631;--soft:#222c27;--sh:none}}
+:root[data-theme="dark"]{--bg:#101613;--tile:#1a221e;--tx:#eef2ef;--mu:#a9b7b0;--dk:#2f8068;--gd:#e0bd62;--gl:#3b3418;--ln:#2c3631;--soft:#222c27;--sh:none}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{margin:0;background:var(--bg);color:var(--tx);font-family:"Plus Jakarta Sans",system-ui,sans-serif;font-size:18px;line-height:1.5}
+body{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+.app{max-width:520px;margin:0 auto;padding:14px 14px 40px}
+.g{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.t{background:var(--tile);border-radius:24px;padding:18px;min-width:0;box-shadow:var(--sh);overflow:hidden}
+.s2{grid-column:span 2}
+button.t{font:inherit;color:inherit;border:0;text-align:left;cursor:pointer;transition:transform .12s}
+button.t:active{transform:scale(.97)}
+button:focus-visible{outline:3px solid var(--gd);outline-offset:2px}
+p{margin:0}h1,h2{margin:0;font-weight:800}
+h1{font-size:30px;line-height:1.15}h2{font-size:21px;line-height:1.3}
+.mu{color:var(--mu)}.k{font-size:15px;font-weight:700}.sm{font-size:15px}
+.art svg,.ban svg{display:block;width:100%;height:100%}
+.hero{padding:0;position:relative;color:#fff}
+.hero .im{height:210px}.hero .im svg{display:block;width:100%;height:100%}
+.hero .ov{position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,30,24,.15),rgba(8,30,24,.78));display:flex;flex-direction:column;justify-content:flex-end;padding:18px}
+.hero .ar2{font-family:Amiri,serif;font-size:26px;line-height:1.4;color:#f3dfa0}
+.hero .bar{background:rgba(255,255,255,.28)}.hero .bar i{background:#f3dfa0}
+.bar{height:10px;border-radius:8px;background:var(--ln);margin:10px 0 6px;overflow:hidden}
+.bar i{display:block;height:100%;background:var(--dk);border-radius:8px;transition:width .4s}
+.dk{background:var(--dk);color:var(--dkt)}.dk .mu{color:inherit;opacity:.85}
+.pic{padding:0;position:relative;color:#fff;min-height:120px}
+.pic .im{position:absolute;inset:0}.pic .im svg{width:100%;height:100%;display:block}
+.pic .cap{position:relative;display:flex;flex-direction:column;justify-content:flex-end;min-height:120px;padding:12px 14px;background:linear-gradient(180deg,transparent 35%,rgba(0,0,0,.7))}
+.pic b{font-size:16px;line-height:1.25}.pic span{font-size:13px;opacity:.9}
+.st{display:flex;align-items:center;gap:14px;min-height:0;padding:14px 18px}.st .go{margin-left:auto;font-size:22px;color:var(--gd);font-weight:800}
+.ico{width:60px;height:44px;border-radius:12px;background:var(--gl);color:var(--gd);display:grid;place-items:center;font-size:22px}
+.cn{font-size:14px;font-weight:700;color:var(--mu)}
+.sec{grid-column:span 2;font-size:14px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--gd);margin:8px 4px 0}
+.row{display:flex;align-items:center;gap:14px}
+.num{width:42px;height:42px;border-radius:14px;flex:none;display:grid;place-items:center;font-weight:800;background:var(--soft);border:1px solid var(--ln)}
+.row.done .num{background:var(--dk);color:var(--dkt);border-color:var(--dk)}
+.bk{margin-bottom:12px;display:inline-block;padding:11px 20px;border-radius:20px;font-weight:800}
+.ban{height:150px;padding:0;position:relative;color:#fff}
+.ban .ov{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;padding:16px 18px;background:linear-gradient(180deg,transparent 30%,rgba(5,25,20,.8))}
+.ban .im{position:absolute;inset:0}
+.ar{direction:rtl;text-align:center;font-family:Amiri,"Traditional Arabic",serif;line-height:2.1;font-size:var(--fs,32px);padding:26px 16px;border:1.5px solid var(--gd)}
+.lat{font-size:calc(var(--fs,32px)*.56);font-weight:700;line-height:1.55}
+.art{font-size:calc(var(--fs,32px)*.56);line-height:1.6}
+.lb{font-size:13px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--gd);margin-bottom:6px}
+.note{background:var(--gl)}
+.ctl{text-align:center;font-weight:800;font-size:17px;display:flex;align-items:center;justify-content:center;min-height:64px;padding:10px}
+.on{background:var(--dk);color:var(--dkt)}
+.dis{opacity:.4;pointer-events:none}
+.disc{font-size:14px;text-align:center;margin:18px 8px 0}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+<defs>
+<linearGradient id="gS" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0f3a45"/><stop offset="1" stop-color="#e9c77d"/></linearGradient>
+<linearGradient id="gK" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0b3a30"/><stop offset="1" stop-color="#1f7360"/></linearGradient>
+<linearGradient id="gN" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2b6f8a"/><stop offset="1" stop-color="#f1dca4"/></linearGradient>
+<symbol id="sc" viewBox="0 0 400 200" preserveAspectRatio="xMidYMid slice">
+<rect width="400" height="200" fill="url(#gS)"/><circle cx="90" cy="120" r="34" fill="#fff3c8" opacity=".85"/>
+<polygon points="0,170 60,110 110,150 170,95 240,155 300,105 360,150 400,125 400,200 0,200" fill="#0c2e2a" opacity=".8"/>
+<g fill="#16292a"><rect x="318" y="100" width="40" height="80"/><rect x="326" y="62" width="24" height="40"/><rect x="334" y="30" width="8" height="34"/><rect x="262" y="125" width="26" height="55"/><rect x="368" y="120" width="22" height="60"/></g>
+<circle cx="338" cy="82" r="9" fill="#e9c77d"/><circle cx="341" cy="80" r="8" fill="#16292a"/><polygon points="338,12 342,30 334,30" fill="#e9c77d"/>
+<rect y="170" width="400" height="30" fill="#0a2420"/>
+<ellipse cx="180" cy="176" rx="95" ry="14" fill="#f3ead2" opacity=".35"/>
+<rect x="150" y="118" width="60" height="58" fill="#111"/><rect x="150" y="128" width="60" height="7" fill="#e0bd62"/><rect x="190" y="146" width="10" height="30" fill="#e0bd62"/>
+</symbol>
+<symbol id="ka" viewBox="0 0 400 200" preserveAspectRatio="xMidYMid slice">
+<rect width="400" height="200" fill="url(#gK)"/>
+<g fill="#fff" opacity=".7"><circle cx="40" cy="30" r="1.8"/><circle cx="120" cy="18" r="1.4"/><circle cx="300" cy="26" r="1.8"/><circle cx="360" cy="60" r="1.4"/><circle cx="70" cy="75" r="1.2"/><circle cx="250" cy="55" r="1.2"/></g>
+<rect y="168" width="400" height="32" fill="#0a2e26"/><ellipse cx="200" cy="170" rx="150" ry="12" fill="#f3ead2" opacity=".3"/>
+<polygon points="250,56 292,70 292,166 250,172" fill="#050505"/><rect x="140" y="52" width="110" height="120" fill="#111"/>
+<rect x="140" y="68" width="110" height="12" fill="#e0bd62"/><polygon points="250,70 292,82 292,92 250,80" fill="#b8913a"/>
+<rect x="190" y="112" width="22" height="60" rx="2" fill="#e0bd62"/><rect x="195" y="118" width="12" height="50" fill="#b8913a"/>
+</symbol>
+<symbol id="nb" viewBox="0 0 400 200" preserveAspectRatio="xMidYMid slice">
+<rect width="400" height="200" fill="url(#gN)"/><circle cx="320" cy="50" r="22" fill="#fff6d6" opacity=".9"/>
+<rect y="170" width="400" height="30" fill="#bfa76a"/>
+<g fill="#f4ecd6"><rect x="80" y="70" width="18" height="100"/><rect x="302" y="70" width="18" height="100"/><rect x="120" y="120" width="160" height="50"/></g>
+<g fill="#0f6a50"><polygon points="89,40 99,70 79,70"/><polygon points="311,40 321,70 301,70"/></g>
+<g fill="#e0bd62"><rect x="86" y="58" width="6" height="14"/><rect x="308" y="58" width="6" height="14"/><rect x="198" y="52" width="4" height="22"/></g>
+<rect x="160" y="92" width="80" height="30" fill="#e9dfc2"/>
+<path d="M160 92 A40 40 0 0 1 240 92 Z" fill="#17896a"/><path d="M170 92 A30 30 0 0 1 230 92 Z" fill="#1fa07d" opacity=".6"/>
+<g fill="#0f4a3c" opacity=".75"><rect x="136" y="136" width="14" height="34" rx="7"/><rect x="170" y="136" width="14" height="34" rx="7"/><rect x="216" y="136" width="14" height="34" rx="7"/><rect x="250" y="136" width="14" height="34" rx="7"/></g>
+</symbol>
+</defs></svg>
+<div class="app" id="app"></div>
+<script>
+var D=[
+["Berangkat","Keluar rumah","بِسْمِ اللَّهِ تَوَكَّلْتُ عَلَى اللَّهِ، لَا حَوْلَ وَلَا قُوَّةَ إِلَّا بِاللَّهِ","Bismillāhi tawakkaltu ‘alallāh, lā ḥawla wa lā quwwata illā billāh.","Dengan nama Allah, aku bertawakal kepada Allah. Tiada daya dan kekuatan kecuali dengan pertolongan Allah.",""],
+["Berangkat","Naik kendaraan","سُبْحَانَ الَّذِي سَخَّرَ لَنَا هَذَا وَمَا كُنَّا لَهُ مُقْرِنِينَ وَإِنَّا إِلَى رَبِّنَا لَمُنْقَلِبُونَ","Subḥānalladzī sakhkhara lanā hādzā wa mā kunnā lahū muqrinīn, wa innā ilā rabbinā lamunqalibūn.","Maha Suci Allah yang menundukkan kendaraan ini bagi kami, padahal kami tidak mampu menguasainya. Dan sesungguhnya kepada Tuhan kami, kami akan kembali.","Dibaca juga saat naik pesawat atau bus."],
+["Ihram","Niat ihram umrah","لَبَّيْكَ اللَّهُمَّ عُمْرَةً","Labbaika Allāhumma ‘umratan.","Aku penuhi panggilan-Mu ya Allah untuk berumrah.","Dibaca di miqat setelah berpakaian ihram."],
+["Ihram","Talbiyah","لَبَّيْكَ اللَّهُمَّ لَبَّيْكَ، لَبَّيْكَ لَا شَرِيكَ لَكَ لَبَّيْكَ، إِنَّ الْحَمْدَ وَالنِّعْمَةَ لَكَ وَالْمُلْكَ، لَا شَرِيكَ لَكَ","Labbaik Allāhumma labbaik, labbaika lā syarīka laka labbaik, innal ḥamda wan ni‘mata laka wal mulk, lā syarīka lak.","Aku penuhi panggilan-Mu ya Allah. Tiada sekutu bagi-Mu. Sesungguhnya segala puji, nikmat, dan kerajaan adalah milik-Mu.","Perbanyak sepanjang perjalanan sampai mulai thawaf."],
+["Tiba di Mekkah","Memasuki kota Mekkah","اللَّهُمَّ هَذَا حَرَمُكَ وَأَمْنُكَ فَحَرِّمْ لَحْمِي وَدَمِي عَلَى النَّارِ وَآمِنِّي مِنْ عَذَابِكَ يَوْمَ تَبْعَثُ عِبَادَكَ","Allāhumma hādzā ḥaramuka wa amnuka faḥarrim laḥmī wa damī ‘alan nār, wa āminnī min ‘adzābika yauma tab‘atsu ‘ibādak.","Ya Allah, ini tanah haram dan tempat aman-Mu. Haramkanlah dagingku dan darahku dari api neraka, dan amankan aku dari azab-Mu pada hari Engkau bangkitkan hamba-hamba-Mu.",""],
+["Tiba di Mekkah","Masuk Masjidil Haram","بِسْمِ اللَّهِ وَالصَّلَاةُ وَالسَّلَامُ عَلَى رَسُولِ اللَّهِ، اللَّهُمَّ افْتَحْ لِي أَبْوَابَ رَحْمَتِكَ","Bismillāhi waṣ-ṣalātu was-salāmu ‘alā rasūlillāh, Allāhummaftaḥ lī abwāba raḥmatik.","Dengan nama Allah, shalawat dan salam atas Rasulullah. Ya Allah, bukakanlah pintu-pintu rahmat-Mu untukku.","Melangkah masuk dengan kaki kanan."],
+["Tiba di Mekkah","Pertama melihat Ka’bah","اللَّهُمَّ زِدْ هَذَا الْبَيْتَ تَشْرِيفًا وَتَعْظِيمًا وَتَكْرِيمًا وَمَهَابَةً","Allāhumma zid hādzal baita tasyrīfan wa ta‘ẓīman wa takrīman wa mahābah.","Ya Allah, tambahkanlah kemuliaan, keagungan, kehormatan, dan wibawa pada rumah ini.","Angkat tangan dan berdoa sesuka hati, ini waktu mustajab."],
+["Thawaf","Istilam Hajar Aswad","بِسْمِ اللَّهِ وَاللَّهُ أَكْبَرُ","Bismillāhi wallāhu akbar.","Dengan nama Allah, Allah Maha Besar.","Dibaca setiap kali lurus dengan Hajar Aswad, awal tiap putaran."],
+["Thawaf","Antara Rukun Yamani dan Hajar Aswad","رَبَّنَا آتِنَا فِي الدُّنْيَا حَسَنَةً وَفِي الْآخِرَةِ حَسَنَةً وَقِنَا عَذَابَ النَّارِ","Rabbanā ātinā fid-dunyā ḥasanah, wa fil-ākhirati ḥasanah, wa qinā ‘adzāban-nār.","Ya Tuhan kami, berilah kami kebaikan di dunia dan kebaikan di akhirat, dan lindungilah kami dari azab neraka.","Diulang pada setiap putaran. Di bagian lain thawaf, bebas berdoa atau berdzikir."],
+["Thawaf","Di belakang Maqam Ibrahim","وَاتَّخِذُوا مِنْ مَقَامِ إِبْرَاهِيمَ مُصَلًّى","Wattakhidzū min maqāmi Ibrāhīma muṣallā.","Dan jadikanlah sebagian maqam Ibrahim sebagai tempat shalat.","Setelah 7 putaran, shalat sunnah dua rakaat."],
+["Thawaf","Minum air zamzam","اللَّهُمَّ إِنِّي أَسْأَلُكَ عِلْمًا نَافِعًا وَرِزْقًا وَاسِعًا وَشِفَاءً مِنْ كُلِّ دَاءٍ","Allāhumma innī as’aluka ‘ilman nāfi‘ā, wa rizqan wāsi‘ā, wa syifā’an min kulli dā’.","Ya Allah, aku memohon kepada-Mu ilmu yang bermanfaat, rezeki yang luas, dan kesembuhan dari segala penyakit.","Minum menghadap Ka’bah."],
+["Sa’i","Mendekati bukit Safa","إِنَّ الصَّفَا وَالْمَرْوَةَ مِنْ شَعَائِرِ اللَّهِ","Innaṣ-ṣafā wal-marwata min sya‘ā’irillāh.","Sesungguhnya Safa dan Marwah adalah sebagian dari syiar Allah.","Naik ke Safa, menghadap Ka’bah, bertakbir lalu berdoa."],
+["Sa’i","Berjalan antara Safa dan Marwah","رَبِّ اغْفِرْ وَارْحَمْ إِنَّكَ أَنْتَ الْأَعَزُّ الْأَكْرَمُ","Rabbigfir warḥam innaka antal a‘azzul akram.","Ya Tuhanku, ampunilah dan rahmatilah, sesungguhnya Engkau Maha Perkasa lagi Maha Mulia.","Tujuh kali jalan, dari Safa sampai Safa lagi hitungannya 7 lintasan."],
+["Tahallul","Selesai umrah dan tahallul","اللَّهُمَّ تَقَبَّلْ مِنَّا إِنَّكَ أَنْتَ السَّمِيعُ الْعَلِيمُ","Allāhumma taqabbal minnā innaka antas-samī‘ul ‘alīm.","Ya Allah, terimalah amal kami, sesungguhnya Engkau Maha Mendengar lagi Maha Mengetahui.","Cukur atau potong rambut, lalu ihram selesai."]
+];
+var S=[["Berangkat","🏠","sc"],["Ihram","🤍","sc"],["Tiba di Mekkah","🕌","sc"],["Thawaf","🔄","ka"],["Sa’i","🚶","sc"],["Tahallul","✂️","nb"]];
+var v="home",stg=0,cur=0,from="home",fs,done,fav;
+function ld(k,d){try{var x=localStorage.getItem(k);return x?JSON.parse(x):d}catch(e){return d}}
+function sv(k,x){try{localStorage.setItem(k,JSON.stringify(x))}catch(e){}}
+fs=ld("bfs",32);done=ld("bdone",{});fav=ld("bfav",{});
+function sym(id){return '<svg viewBox="0 0 400 200" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><use href="#'+id+'"/></svg>'}
+function cnt(s){var a=0,b=0;D.forEach(function(d,i){if(d[0]==s){a++;if(done[i])b++}});return[a,b]}
+function total(){var n=0;for(var k in done)if(done[k])n++;return n}
+function item(i){return '<button class="t s2 row'+(done[i]?' done':'')+'" onclick="op('+i+')"><span class="num">'+(done[i]?'✓':(i+1))+'</span><span><b>'+D[i][1]+'</b><span class="mu sm" style="display:block">'+D[i][0]+(fav[i]?' · ★':'')+'</span></span></button>'}
+function home(){
+ var n=total(),t=D.length,nx=0;for(var i=0;i<t;i++)if(!done[i]){nx=i;break}
+ var h='<div class="g"><div class="t s2 hero"><div class="im">'+sym('sc')+'</div><div class="ov"><p class="ar2" dir="rtl" lang="ar">لَبَّيْكَ اللَّهُمَّ عُمْرَةً</p><h1>Doa Umrah</h1><p class="sm" style="opacity:.9">Dari rumah sampai tahallul</p><div class="bar"><i style="width:'+Math.round(n/t*100)+'%"></i></div><p class="k">'+n+' dari '+t+' doa selesai</p></div></div>';
+ h+=n<t?'<button class="t s2 dk" onclick="op('+nx+')"><p class="k mu">Lanjutkan membaca</p><h2 style="margin-top:4px">'+D[nx][1]+'</h2><p class="mu sm" style="margin-top:4px">'+D[nx][0]+' · ketuk untuk membuka ›</p></button>':'<div class="t s2 dk"><h2>Alhamdulillah</h2><p class="mu">Semua doa sudah dibaca.</p></div>';
+ h+='<p class="sec">Tahapan umrah</p>';
+ S.forEach(function(s,i){var c=cnt(s[0]);h+='<button class="t s2 st" onclick="os('+i+')"><span class="ico">'+s[1]+'</span><span><b style="display:block">'+s[0]+'</b><span class="cn">'+c[1]+' dari '+c[0]+' doa selesai</span></span><span class="go">›</span></button>'});
+ h+='<p class="sec">Dua tanah suci</p>';
+ h+='<div class="t pic"><div class="im">'+sym('ka')+'</div><div class="cap"><b>Ka’bah</b><span>Masjidil Haram, Mekkah</span></div></div>';
+ h+='<div class="t pic"><div class="im">'+sym('nb')+'</div><div class="cap"><b>Masjid Nabawi</b><span>Madinah</span></div></div>';
+ h+='<button class="t s2 row" onclick="of()"><span class="ico">★</span><span><b>Favorit saya</b><span class="mu sm" style="display:block">Doa yang sering dibaca</span></span></button>';
+ h+='<button class="t ctl" aria-label="Perkecil tulisan" onclick="sz(-4)">A−</button><button class="t ctl" aria-label="Perbesar tulisan" onclick="sz(4)">A+</button>';
+ h+='<button class="t ctl s2" onclick="tg()">◐ Ganti tema terang/gelap</button>';
+ h+='<p class="disc mu s2">Doa disusun ringkas. Untuk bacaan lengkap dan tata cara, ikuti arahan pembimbing manasik Anda.</p></div>';
+ return h}
+function stage(){var h='<button class="t bk" onclick="hm()">‹ Beranda</button><div class="g"><div class="t s2 ban"><div class="im">'+sym(S[stg][2])+'</div><div class="ov"><p class="k" style="opacity:.9">Tahap '+(stg+1)+' dari '+S.length+'</p><h1>'+S[stg][0]+'</h1></div></div>';
+ D.forEach(function(d,i){if(d[0]==S[stg][0])h+=item(i)});return h+'</div>'}
+function favs(){var h='<button class="t bk" onclick="hm()">‹ Beranda</button><div class="g"><div class="t s2 dk"><h1>★ Favorit</h1></div>',c=0;
+ D.forEach(function(d,i){if(fav[i]){h+=item(i);c++}});
+ if(!c)h+='<div class="t s2 mu">Belum ada. Buka sebuah doa lalu ketuk “Favorit”.</div>';return h+'</div>'}
+function detail(){var d=D[cur],si=0;S.forEach(function(s,i){if(s[0]==d[0])si=i});
+ var h='<button class="t bk" onclick="bk()">‹ Kembali</button><div class="g">';
+ h+='<div class="t s2 ban"><div class="im">'+sym(S[si][2])+'</div><div class="ov"><p class="k" style="opacity:.9">'+d[0]+'</p><h2>'+d[1]+'</h2></div></div>';
+ h+='<div class="t s2 ar" lang="ar">'+d[2]+'</div>';
+ h+='<div class="t s2"><p class="lb">Bacaan latin</p><p class="lat">'+d[3]+'</p></div>';
+ h+='<div class="t s2"><p class="lb">Artinya</p><p class="art">'+d[4]+'</p></div>';
+ if(d[5])h+='<div class="t s2 note"><p class="lb">Catatan</p><p>'+d[5]+'</p></div>';
+ h+='<button class="t ctl" aria-label="Perkecil tulisan" onclick="sz(-4)">A−</button><button class="t ctl" aria-label="Perbesar tulisan" onclick="sz(4)">A+</button>';
+ h+='<button class="t ctl'+(fav[cur]?' on':'')+'" onclick="tf()">'+(fav[cur]?'★ Favorit':'☆ Favorit')+'</button><button class="t ctl'+(done[cur]?' on':'')+'" onclick="td()">'+(done[cur]?'✓ Selesai':'Tandai selesai')+'</button>';
+ h+='<button class="t ctl'+(cur==0?' dis':'')+'" onclick="op('+(cur-1)+')">‹ Sebelumnya</button><button class="t ctl'+(cur==D.length-1?' dis':'')+'" onclick="op('+(cur+1)+')">Berikutnya ›</button></div>';
+ return h}
+function render(){var a=document.getElementById("app");a.style.setProperty("--fs",fs+"px");
+ a.innerHTML=v=="detail"?detail():v=="stage"?stage():v=="fav"?favs():home();window.scrollTo(0,0)}
+function keep(){var y=window.scrollY;render();window.scrollTo(0,y)}
+function hm(){v="home";render()}
+function os(i){stg=i;v="stage";render()}
+function of(){v="fav";render()}
+function op(i){if(v!="detail")from=v;cur=i;v="detail";render()}
+function bk(){v=from;render()}
+function sz(x){fs=Math.max(24,Math.min(52,fs+x));sv("bfs",fs);keep()}
+function tf(){fav[cur]=!fav[cur];sv("bfav",fav);keep()}
+function td(){done[cur]=!done[cur];sv("bdone",done);keep()}
+function tg(){var r=document.documentElement,a=r.getAttribute("data-theme"),dk=a?a=="dark":matchMedia("(prefers-color-scheme: dark)").matches;r.setAttribute("data-theme",dk?"light":"dark")}
+render();
+</script>
+</body>
+</html>
